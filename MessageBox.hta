@@ -1,0 +1,89 @@
+<head>
+    <title>Sample Message Box</title>
+    <hta:application id="tsda" applicationname="Thinspace Agent" border="dialog" caption="yes"
+        icon="/graphics/creature.ico" showintaskbar="yes" singleinstance="yes" sysmenu="yes"
+        contextmenu="no" innerborder="yes" scroll="no" windowstate="normal">
+	<style type="text/css">
+	    p.serif
+	    {
+	        font-family: Arial, Helvetica, sans-serif;
+	    }
+	</style>
+     <SCRIPT type="text/vbscript" language="vbscript">
+      ' Do the window sizing early so user doens't see the window move and resize
+      Window.resizeTo 650, 450
+      Call CenterWindow
+      Sub CenterWindow()
+        Dim x, y
+        With Window.Screen
+          x = (.AvailWidth  - 650 ) \ 2
+          y = (.AvailHeight - 450 ) \ 2
+        End With
+        Window.MoveTo x, y
+      End Sub	
+    </SCRIPT>
+	<body onLoad="window.focus()" onBlur="window.focus()">
+
+	<div >
+	<table border=0 width="100%" height="100%">
+		<tr>
+			<td align="center" valign="top">
+				<h2><p class="serif">Sample Message Box</p></h2>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+				<h4><p class="serif">This is Message Title</p></h4>
+			</td>
+		</tr>
+		<tr>
+			<td align="justify" valign="top">				
+				<p class="serif">This is a sample text to fill up the space in this dialogbox. This is a sample text to fill up the space in this dialogbox. This is a sample text to fill up the space in this dialogbox</p>
+			</td>
+		</tr>
+		<tr>
+			<td align="left" valign="top">				
+				<table border="2" cellspacing="0" cellpadding="7" >
+				<tr>		
+			        <td align="left" valign="top">				
+				        <p class="serif">Name</p>
+			        </td>
+			        <td align="left" valign="top">				
+				        <p class="serif">Mandar Shinde</p>
+			        </td>
+		        </tr>    	
+				<tr>		
+			        <td align="left" valign="top">				
+				        <p class="serif">email</p>
+			        </td>
+			        <td align="left" valign="top">				
+				        <p class="serif">01.mandar[@]gmail[.]com</p>
+			        </td>
+		        </tr>				
+
+		        
+		        
+		        <tr>		
+			        <td align="left" valign="top">				
+				        <p class="serif">Some Link </p>
+			        </td>
+			        <td align="left" valign="top">				
+				        <p class="serif"><a href="http://mandarsblog.wordpress.com">Go to Internet and Read This One</a></p>
+			        </td>
+		        </tr> 
+			   
+		         </tr>
+		         </table>
+			</td>
+		</tr>
+	    <tr>
+	         <td align="right" valign="middle">
+			     <input type="submit" value="Continue" style="float:right;" onclick="self.close()" >
+		    </td>
+		</tr>
+		</table>
+
+	
+	</div>
+	</body>
+</head>
