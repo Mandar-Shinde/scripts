@@ -1,6 +1,6 @@
-# Good To Know
+# Tips
 
- * Getting Windows Error Code Information from Command Prompt
+ *  Windows error code to text message
 ````
 net helpmsg 1
 ````
